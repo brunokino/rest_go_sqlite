@@ -35,6 +35,7 @@ func MockUsers() {
 
 	user.Firstname = wordGenerator.GetWord(5)
 	user.Lastname = wordGenerator.GetWord(5)
+	user.City = wordGenerator.GetWord(5)
 	db.Create(&user)
 
 }
@@ -99,6 +100,7 @@ func UpdateUser(c *gin.Context) {
 				ID:        user.ID,
 				Firstname: newUser.Firstname,
 				Lastname:  newUser.Lastname,
+				City:      newUser.City,
 			}
 
 			// UPDATE users SET firstname='newUser.Firstname', lastname='newUser.Lastname' WHERE id = user.Id;

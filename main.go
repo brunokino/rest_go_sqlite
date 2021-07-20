@@ -14,6 +14,7 @@ func Cors() gin.HandlerFunc {
 }
 
 func main() {
+
 	gin.SetMode(gin.ReleaseMode)
 	r := gin.Default()
 
@@ -28,5 +29,5 @@ func main() {
 		v1.DELETE("/users/:id", DeleteUser)
 	}
 	MockUsers()
-	r.Run(":8080")
+	r.Run(":8000")
 }
